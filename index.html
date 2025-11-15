@@ -10,24 +10,28 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
 body{background:#f2f4f8;color:#333;scroll-behavior:smooth;}
 a{text-decoration:none;color:inherit;}
-section{padding:80px 20px;}
-h2{margin-bottom:40px;text-align:center;color:#1a73e8;}
-header{position:fixed;top:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;z-index:1000;font-size:24px;}
-nav{display:flex;justify-content:center;gap:25px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:60px;padding:10px;z-index:999;}
+header{position:fixed;top:0;width:100%;background:rgba(0,0,0,0.8);color:#fff;padding:15px;text-align:center;z-index:1000;font-size:24px;}
+nav{display:flex;justify-content:center;gap:20px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:60px;padding:10px;z-index:999;}
 nav a{color:#333;font-weight:700;transition:0.3s;}
 nav a:hover{color:#1a73e8;}
-.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;position:relative;overflow:hidden;background:#1a73e8;}
-.hero video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;filter:brightness(0.5);}
-.hero h1{font-size:50px;margin-bottom:20px;}
-.hero p{font-size:24px;margin-bottom:30px;}
-.hero .cta-btn{padding:15px 35px;margin:5px;background:#ff9800;color:#fff;border-radius:8px;font-weight:700;transition:0.3s;}
-.hero .cta-btn:hover{background:#e68a00;}
+.hero{height:100vh;position:relative;overflow:hidden;}
+.slider{position:relative;height:100%;width:100%;overflow:hidden;}
+.slide{position:absolute;width:100%;height:100%;opacity:0;transition:1s;}
+.slide img{width:100%;height:100%;object-fit:cover;filter:brightness(0.5);}
+.slide.active{opacity:1;}
+.hero-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;}
+.hero-text h1{font-size:50px;margin-bottom:20px;}
+.hero-text p{font-size:24px;margin-bottom:30px;}
+.cta-btn{padding:15px 35px;margin:5px;background:#ff9800;color:#fff;border-radius:8px;font-weight:700;transition:0.3s;display:inline-block;}
+.cta-btn:hover{background:#e68a00;}
+section{padding:80px 20px;}
+h2{text-align:center;margin-bottom:40px;color:#1a73e8;}
 .services{background:#f0f2f5;}
 .service-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;}
 .service-card{background:#fff;border-radius:15px;padding:30px;width:250px;text-align:center;color:#333;transition:0.3s;box-shadow:0 8px 20px rgba(0,0,0,0.2);}
 .service-card:hover{transform:translateY(-10px);}
 .service-card img{width:60px;margin-bottom:15px;}
-.stats{background:#1a73e8;color:#fff;text-align:center;}
+.stats{background:#1a73e8;color:#fff;text-align:center;padding:50px 20px;}
 .stat-items{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;}
 .stat-item{flex:1 1 200px;font-size:28px;font-weight:700;transition:0.5s;}
 .gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
@@ -41,7 +45,8 @@ nav a:hover{color:#1a73e8;}
 #whatsapp-btn{bottom:140px;background:#25D366;}
 #call-btn{bottom:80px;background:#0f9d58;}
 footer{background:#333;color:#fff;text-align:center;padding:25px;}
-@media(max-width:768px){.service-cards,.stat-items,.gallery{flex-direction:column;align-items:center;}.hero h1{font-size:42px;}.hero p{font-size:20px;}}
+.map-container{width:100%;height:400px;margin-top:20px;border-radius:12px;overflow:hidden;}
+@media(max-width:768px){.service-cards,.stat-items,.gallery{flex-direction:column;align-items:center;}.hero-text h1{font-size:42px;}.hero-text p{font-size:20px;}}
 </style>
 </head>
 <body>
@@ -55,18 +60,26 @@ footer{background:#333;color:#fff;text-align:center;padding:25px;}
 <a href="#gallery">Gallery</a>
 <a href="#newsletter">Newsletter</a>
 <a href="#contact">Contact</a>
+<a href="booking.html">Booking</a>
+<a href="payment.html">Payment</a>
+<a href="faq.html">FAQ</a>
+<a href="quotation.html">Quotation</a>
+<a href="email.html">Email</a>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero Slider -->
 <section class="hero" id="hero">
-<video autoplay muted loop>
-<source src="https://cdn.pixabay.com/vimeo/589594902/pexels-pixabay-589594902.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<div class="slider">
+<div class="slide active"><img src="https://cdn.pixabay.com/photo/2015/09/18/18/05/laptop-942642_1280.jpg" alt="Laptop Repair"></div>
+<div class="slide"><img src="https://cdn.pixabay.com/photo/2014/05/03/00/48/computer-336600_1280.jpg" alt="PC Repair"></div>
+<div class="slide"><img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/data-849618_1280.jpg" alt="Data Recovery"></div>
+</div>
+<div class="hero-text">
 <h1><span id="typed-text"></span></h1>
 <p>Fast, Affordable & Reliable Computer Repair Services</p>
 <a href="booking.html" class="cta-btn">📅 Book Now</a>
 <a href="https://wa.me/923014578828" class="cta-btn">💬 WhatsApp</a>
+</div>
 </section>
 
 <script>
@@ -76,6 +89,18 @@ typeSpeed:50,
 backSpeed:30,
 loop:true
 });
+
+// Slider script
+let slides=document.querySelectorAll('.slide');
+let current=0;
+function showSlide(index){
+slides.forEach(s=>s.classList.remove('active'));
+slides[index].classList.add('active');
+}
+setInterval(()=>{
+current=(current+1)%slides.length;
+showSlide(current);
+},4000);
 </script>
 
 <!-- Services Section -->
@@ -139,6 +164,7 @@ counters.forEach(counter=>{
 <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/laptop-1868772_1280.jpg" alt="Laptop repair work">
 <img src="https://cdn.pixabay.com/photo/2014/04/05/11/40/computer-316197_1280.jpg" alt="PC components repair">
 <img src="https://cdn.pixabay.com/photo/2017/08/01/08/29/computer-2569942_1280.jpg" alt="Data recovery process">
+<img src="https://cdn.pixabay.com/photo/2015/09/05/21/51/computer-926558_1280.jpg" alt="Hardware repair">
 </div>
 </section>
 
@@ -151,13 +177,28 @@ counters.forEach(counter=>{
 </form>
 </section>
 
+<!-- Contact Section -->
+<section id="contact">
+<h2>Contact Us</h2>
+<p style="text-align:center;">📞 Call: 03014578828 | 💬 WhatsApp: <a href="https://wa.me/923014578828">Click Here</a></p>
+<div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.973061109828!2d72.8833283152051!3d33.68442298068807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df951e4c556999%3A0x2d1b9f38b28d7c0e!2sIslamabad%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1699982763534!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+</section>
+
 <!-- Floating Buttons -->
 <a id="whatsapp-btn" href="https://wa.me/923014578828" target="_blank">💬</a>
 <a id="call-btn" href="tel:03014578828">📞</a>
 
 <!-- Footer -->
-<footer id="contact">
+<footer>
 <p>© 2025 Computer Repairing by Rizwan. All Rights Reserved.</p>
+<p>Follow us: 
+<a href="https://facebook.com/" target="_blank">Facebook</a> | 
+<a href="https://twitter.com/" target="_blank">Twitter</a> | 
+<a href="https://instagram.com/" target="_blank">Instagram</a> | 
+<a href="https://youtube.com/" target="_blank">YouTube</a>
+</p>
 </footer>
 
 </body>
