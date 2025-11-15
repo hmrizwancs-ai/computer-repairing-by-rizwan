@@ -7,62 +7,72 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <style>
-/* ===== Reset & Global Styles ===== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
-body{color:#333;background:#f4f6f8;}
+body{background:#f0f2f5;color:#333;}
 a{text-decoration:none;color:inherit;}
 section{padding:80px 20px;}
 h2{margin-bottom:40px;text-align:center;color:#1a73e8;}
+
 /* ===== Header & Navigation ===== */
-header{position:fixed;top:0;width:100%;background:rgba(0,0,0,0.6);color:#fff;padding:15px 0;text-align:center;z-index:1000;font-size:24px;}
+header{position:fixed;top:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;z-index:1000;font-size:24px;}
 nav{display:flex;justify-content:center;gap:25px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:60px;padding:10px;}
 nav a{color:#333;font-weight:700;transition:0.3s;}
 nav a:hover{color:#1a73e8;}
+
 /* ===== Hero Section ===== */
 .hero{
   height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;
-  position:relative;overflow:hidden;
+  position:relative;overflow:hidden;background:#1a73e8;
 }
 .hero video{
   position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;
-  filter:brightness(0.5);
+  filter:brightness(0.4);
 }
 .hero h1{font-size:60px;margin-bottom:20px;}
 .hero p{font-size:24px;margin-bottom:30px;}
-.hero .cta-btn{padding:15px 35px;margin:5px;background:#1a73e8;color:#fff;border-radius:8px;font-weight:700;transition:0.3s;}
-.hero .cta-btn:hover{background:#0d4aad;}
-/* ===== Service Cards (Glassmorphism) ===== */
-.services{background:#f4f6f8;}
+.hero .cta-btn{padding:15px 35px;margin:5px;background:#ff9800;color:#fff;border-radius:8px;font-weight:700;transition:0.3s;}
+.hero .cta-btn:hover{background:#e68a00;}
+
+/* ===== Services Section (Glassmorphism) ===== */
+.services{background:#f0f2f5;}
 .service-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;}
 .service-card{
-  background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border-radius:15px;padding:30px;width:250px;text-align:center;color:#fff;transition:0.3s;box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border-radius:15px;padding:30px;width:250px;text-align:center;color:#333;transition:0.3s;box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 .service-card:hover{transform:translateY(-10px);}
+.service-card img{width:50px;margin-bottom:15px;}
+
 /* ===== Stats Section ===== */
 .stats{background:#1a73e8;color:#fff;text-align:center;}
 .stat-items{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;}
 .stat-item{flex:1 1 200px;font-size:28px;font-weight:700;transition:0.5s;}
-/* ===== Testimonials Slider ===== */
-.testimonials{background:#f4f6f8;}
+
+/* ===== Testimonials ===== */
+.testimonials{background:#f0f2f5;}
 .testimonial-slider{position:relative;max-width:900px;margin:0 auto;overflow:hidden;}
 .testimonial-slide{min-width:100%;transition:0.5s;}
 .testimonial-slide p{font-style:italic;margin-bottom:10px;}
 .testimonial-slide strong{color:#1a73e8;}
-/* ===== Portfolio/Gallery ===== */
+
+/* ===== Portfolio / Work Gallery ===== */
 .gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
 .gallery img{width:300px;height:200px;object-fit:cover;border-radius:12px;transition:0.3s;cursor:pointer;}
 .gallery img:hover{transform:scale(1.05);}
- /* ===== Newsletter ===== */
+
+/* ===== Newsletter ===== */
 .newsletter{background:#fff;text-align:center;padding:50px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.1);}
 .newsletter input{padding:12px 20px;width:60%;border-radius:8px;border:1px solid #ccc;margin-right:10px;}
 .newsletter button{padding:12px 25px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;transition:0.3s;}
 .newsletter button:hover{background:#0d4aad;}
-/* ===== Floating Buttons ===== */
+
+/* ===== Floating WhatsApp / Call Buttons ===== */
 #whatsapp-btn,#call-btn{position:fixed;right:20px;border-radius:50%;font-size:28px;color:#fff;text-align:center;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,0.4);z-index:999;}
 #whatsapp-btn{bottom:140px;background:#25D366;}
 #call-btn{bottom:80px;background:#0f9d58;}
+
 /* ===== Footer ===== */
 footer{background:#333;color:#fff;text-align:center;padding:25px;}
+
 /* ===== Responsive ===== */
 @media(max-width:768px){.service-cards,.stat-items,.gallery{flex-direction:column;align-items:center;}.hero h1{font-size:42px;}.hero p{font-size:20px;}}
 </style>
@@ -70,6 +80,7 @@ footer{background:#333;color:#fff;text-align:center;padding:25px;}
 <body>
 
 <header>Computer Repairing by Rizwan</header>
+
 <nav>
 <a href="#hero">Home</a>
 <a href="#services">Services</a>
@@ -80,19 +91,17 @@ footer{background:#333;color:#fff;text-align:center;padding:25px;}
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- Hero Section with Video Background -->
+<!-- Hero Section -->
 <section class="hero" id="hero">
-<video autoplay muted loop>
-<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-</video>
 <h1><span id="typed-text"></span></h1>
 <p>Fast, Affordable & Reliable Computer Repair Services</p>
 <a href="booking.html" class="cta-btn">📅 Book Now</a>
 <a href="https://wa.me/923014578828" class="cta-btn">💬 WhatsApp</a>
 </section>
+
 <script>
 var typed = new Typed("#typed-text", {
-strings: ["Professional Computer Repair","Laptop & Desktop Specialist","Trusted & Fast Service"],
+strings: ["Laptop Repair Specialist","PC Repair & Maintenance","Data Recovery Expert"],
 typeSpeed:50,
 backSpeed:30,
 loop:true
@@ -103,10 +112,10 @@ loop:true
 <section class="services" id="services">
 <h2>Our Services</h2>
 <div class="service-cards">
-<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/ffffff/laptop.png"/><h3>Laptop Repair</h3></div>
-<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/ffffff/hard-drive.png"/><h3>PC Repair</h3></div>
-<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/ffffff/software.png"/><h3>Software Installation</h3></div>
-<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/ffffff/data-backup.png"/><h3>Data Recovery</h3></div>
+<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/laptop.png"/><h3>Laptop Repair</h3><p>Hardware & software solutions for all laptop brands.</p></div>
+<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/hard-drive.png"/><h3>PC Repair</h3><p>Desktop troubleshooting, upgrades & optimization.</p></div>
+<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/software.png"/><h3>Software Installation</h3><p>Windows, Linux, antivirus, and essential software setup.</p></div>
+<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/data-backup.png"/><h3>Data Recovery</h3><p>Recover lost or corrupted files efficiently and securely.</p></div>
 </div>
 </section>
 
@@ -119,6 +128,7 @@ loop:true
 <div class="stat-item" data-target="100">0% Customer Satisfaction</div>
 </div>
 </section>
+
 <script>
 const counters=document.querySelectorAll(".stat-item");
 counters.forEach(counter=>{
@@ -145,6 +155,7 @@ counters.forEach(counter=>{
 <div class="testimonial-slide"><p>"Highly recommend Rizwan's services."</p><strong>- Ahmed T.</strong></div>
 </div>
 </section>
+
 <script>
 let slideIndex=0;
 const slides=document.querySelectorAll(".testimonial-slide");
