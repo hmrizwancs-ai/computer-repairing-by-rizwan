@@ -11,15 +11,15 @@
                         url('https://images.unsplash.com/photo-1518770660439-4636190af475') no-repeat center center/cover;
             color: #fff;
             text-align: center;
-            padding: 120px 20px;
+            padding: 160px 20px;
         }
         .landing h1 {
-            font-size: 48px;
+            font-size: 52px;
             margin-bottom: 10px;
         }
         .landing p {
-            font-size: 20px;
-            margin-bottom: 25px;
+            font-size: 22px;
+            margin-bottom: 35px;
         }
         .landing .cta-btn {
             background: #1a73e8;
@@ -28,14 +28,61 @@
             margin: 10px;
             border-radius: 6px;
             display: inline-block;
-            font-size: 17px;
+            font-size: 18px;
             text-decoration: none;
         }
         .landing .cta-btn:hover {
             background: #0d4aad;
         }
 
-        /* Responsive Fix */
+        /* Image Gallery */
+        .gallery-section {
+            padding: 30px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px #aaa;
+        }
+
+        /* Social Section */
+        .social-bottom {
+            background: #1a73e8;
+            padding: 30px;
+            text-align: center;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        .social-bottom a {
+            color: #fff;
+            font-size: 22px;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .social-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
         @media(max-width: 600px){
             .landing h1{font-size: 32px;}
             .landing p{font-size: 16px;}
@@ -49,7 +96,7 @@
     <h1>Computer Repairing by Rizwan</h1>
 </header>
 
-<!-- ⭐ UPDATED MENU WITH ALL PAGES ⭐ -->
+<!-- ⭐ FULL MENU WITH ALL PAGES ⭐ -->
 <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -63,30 +110,62 @@
     <a href="login.html">Login</a>
 </nav>
 
-<!-- ⭐⭐⭐ LANDING PAGE SECTION ⭐⭐⭐ -->
+<!-- ⭐⭐⭐ LONG LANDING PAGE SECTION ⭐⭐⭐ -->
 <section class="landing">
     <h1>Professional Computer Repair Services</h1>
-    <p>Fast · Reliable · Affordable — Serving All Laptop & PC Users</p>
+    <p>Fast, Affordable & Trusted Solutions For All Laptop & Desktop Issues</p>
 
     <a href="booking.html" class="cta-btn">📅 Book a Service</a>
     <a href="https://wa.me/923014578828" class="cta-btn">💬 WhatsApp Us</a>
 </section>
 
-
-<!-- MAIN CONTENT BELOW -->
+<!-- ⭐ About Section ⭐ -->
 <div class="container">
-    <h2>Welcome to Rizwan Computer Repairing</h2>
+    <h2>Why Choose Us?</h2>
     <p>
-        We provide complete technical support including laptop repairs, PC assembling,
-        software installation, networking, data recovery, and virus removal.
+        ✔ Experienced Technician  
+        ✔ 100% Transparent Pricing  
+        ✔ Fast Turnaround Time  
+        ✔ Home Service Available  
+        ✔ Professional Diagnostics  
+    </p>
+
+    <p>
+        Whether it's hardware repair, software installation, data recovery, 
+        or laptop screen replacement — we provide premium quality services
+        with guaranteed satisfaction!
     </p>
 </div>
+
+<!-- ⭐⭐⭐ IMAGE GALLERY ⭐⭐⭐ -->
+<section class="gallery-section">
+    <h2>Our Work Gallery</h2>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Repair Work 1">
+        <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="Repair Work 2">
+        <img src="https://images.unsplash.com/photo-1580894894513-364f10b1e8a8" alt="Repair Work 3">
+        <img src="https://images.unsplash.com/photo-1581091012184-5c7232102f0c" alt="Repair Work 4">
+        <img src="https://images.unsplash.com/photo-1593642634371-8b12e02d091c" alt="Repair Work 5">
+        <img src="https://images.unsplash.com/photo-1527430253228-e93688616381" alt="Repair Work 6">
+    </div>
+</section>
+
+<!-- ⭐⭐⭐ SOCIAL MEDIA SECTION AT BOTTOM ⭐⭐⭐ -->
+<section class="social-bottom">
+    <h2>Follow Us on Social Media</h2>
+
+    <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+    <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+    <a href="https://twitter.com" target="_blank">🐦 Twitter</a>
+    <a href="https://youtube.com" target="_blank">▶️ YouTube</a>
+</section>
 
 <!-- Floating WhatsApp Button -->
 <a id="whatsapp-btn" href="https://wa.me/923014578828" target="_blank">💬</a>
 
 <footer>
-    © 2025 Computer Repairing by Rizwan – All Rights Reserved
+    © 2025 Computer Repairing by Rizwan — All Rights Reserved
 </footer>
 
 </body>
