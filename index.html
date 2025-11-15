@@ -7,15 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <style>
+/* ===== Base ===== */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
-body{background:#f0f2f5;color:#333;}
+body{background:#f2f4f8;color:#333;scroll-behavior:smooth;}
 a{text-decoration:none;color:inherit;}
 section{padding:80px 20px;}
 h2{margin-bottom:40px;text-align:center;color:#1a73e8;}
 
-/* ===== Header & Navigation ===== */
+/* ===== Header & Navbar ===== */
 header{position:fixed;top:0;width:100%;background:rgba(0,0,0,0.7);color:#fff;padding:15px;text-align:center;z-index:1000;font-size:24px;}
-nav{display:flex;justify-content:center;gap:25px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:60px;padding:10px;}
+nav{display:flex;justify-content:center;gap:25px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:60px;padding:10px;z-index:999;}
 nav a{color:#333;font-weight:700;transition:0.3s;}
 nav a:hover{color:#1a73e8;}
 
@@ -26,35 +27,35 @@ nav a:hover{color:#1a73e8;}
 }
 .hero video{
   position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;
-  filter:brightness(0.4);
+  filter:brightness(0.5);
 }
 .hero h1{font-size:60px;margin-bottom:20px;}
 .hero p{font-size:24px;margin-bottom:30px;}
 .hero .cta-btn{padding:15px 35px;margin:5px;background:#ff9800;color:#fff;border-radius:8px;font-weight:700;transition:0.3s;}
 .hero .cta-btn:hover{background:#e68a00;}
 
-/* ===== Services Section ===== */
+/* ===== Animated Slider ===== */
+.slider{position:relative;width:100%;max-width:1200px;margin:60px auto;overflow:hidden;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+.slides{display:flex;transition:0.5s;}
+.slide{min-width:100%;height:400px;background-size:cover;background-position:center;}
+.slider-buttons{position:absolute;top:50%;width:100%;display:flex;justify-content:space-between;transform:translateY(-50%);}
+.slider-buttons span{background:rgba(0,0,0,0.5);color:#fff;font-size:30px;padding:10px;cursor:pointer;border-radius:50%;user-select:none;}
+
+/* ===== Services ===== */
 .services{background:#f0f2f5;}
 .service-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;}
 .service-card{
-  background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border-radius:15px;padding:30px;width:250px;text-align:center;color:#333;transition:0.3s;box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  background:#fff;border-radius:15px;padding:30px;width:250px;text-align:center;color:#333;transition:0.3s;box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 .service-card:hover{transform:translateY(-10px);}
-.service-card img{width:50px;margin-bottom:15px;}
+.service-card img{width:60px;margin-bottom:15px;}
 
-/* ===== Stats Section ===== */
+/* ===== Stats ===== */
 .stats{background:#1a73e8;color:#fff;text-align:center;}
 .stat-items{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;}
 .stat-item{flex:1 1 200px;font-size:28px;font-weight:700;transition:0.5s;}
 
-/* ===== Testimonials ===== */
-.testimonials{background:#f0f2f5;}
-.testimonial-slider{position:relative;max-width:900px;margin:0 auto;overflow:hidden;}
-.testimonial-slide{min-width:100%;transition:0.5s;}
-.testimonial-slide p{font-style:italic;margin-bottom:10px;}
-.testimonial-slide strong{color:#1a73e8;}
-
-/* ===== Gallery Section ===== */
+/* ===== Gallery ===== */
 .gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
 .gallery img{width:300px;height:200px;object-fit:cover;border-radius:12px;transition:0.3s;cursor:pointer;}
 .gallery img:hover{transform:scale(1.05);}
@@ -85,7 +86,6 @@ footer{background:#333;color:#fff;text-align:center;padding:25px;}
 <a href="#hero">Home</a>
 <a href="#services">Services</a>
 <a href="#stats">Stats</a>
-<a href="#testimonials">Testimonials</a>
 <a href="#gallery">Gallery</a>
 <a href="#newsletter">Newsletter</a>
 <a href="#contact">Contact</a>
@@ -113,24 +113,24 @@ loop:true
 <h2>Our Services</h2>
 <div class="service-cards">
 <div class="service-card">
-  <img src="https://images.unsplash.com/photo-1581090700227-d7f826d9c36b?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="Laptop Repair"/>
-  <h3>Laptop Repair</h3>
-  <p>Hardware & software solutions for all laptop brands.</p>
+<img src="https://images.unsplash.com/photo-1581090700227-d7f826d9c36b?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="Laptop Repair">
+<h3>Laptop Repair</h3>
+<p>Hardware & software solutions for all laptop brands.</p>
 </div>
 <div class="service-card">
-  <img src="https://images.unsplash.com/photo-1581093588401-5c8d1c17df7a?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="PC Repair"/>
-  <h3>PC Repair</h3>
-  <p>Desktop troubleshooting, upgrades & optimization.</p>
+<img src="https://images.unsplash.com/photo-1581093588401-5c8d1c17df7a?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="PC Repair">
+<h3>PC Repair</h3>
+<p>Desktop troubleshooting, upgrades & optimization.</p>
 </div>
 <div class="service-card">
-  <img src="https://images.unsplash.com/photo-1581092335270-7f2d9a5d0d21?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="Software Installation"/>
-  <h3>Software Installation</h3>
-  <p>Windows, Linux, antivirus, and essential software setup.</p>
+<img src="https://images.unsplash.com/photo-1581092335270-7f2d9a5d0d21?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="Software Installation">
+<h3>Software Installation</h3>
+<p>Windows, Linux, antivirus, and essential software setup.</p>
 </div>
 <div class="service-card">
-  <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="Data Recovery"/>
-  <h3>Data Recovery</h3>
-  <p>Recover lost or corrupted files efficiently and securely.</p>
+<img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="Data Recovery">
+<h3>Data Recovery</h3>
+<p>Recover lost or corrupted files efficiently and securely.</p>
 </div>
 </div>
 </section>
@@ -162,23 +162,6 @@ counters.forEach(counter=>{
 });
 </script>
 
-<!-- Testimonials -->
-<section class="testimonials" id="testimonials">
-<h2>Testimonials</h2>
-<div class="testimonial-slider" id="testimonial-slider">
-<div class="testimonial-slide"><p>"Excellent service! My laptop works like new again."</p><strong>- Ali R.</strong></div>
-<div class="testimonial-slide"><p>"Fast, professional, and affordable."</p><strong>- Sara K.</strong></div>
-<div class="testimonial-slide"><p>"Highly recommend Rizwan's services."</p><strong>- Ahmed T.</strong></div>
-</div>
-</section>
-
-<script>
-let slideIndex=0;
-const slides=document.querySelectorAll(".testimonial-slide");
-function showSlides(){slides.forEach(s=>s.style.display="none");slideIndex++;if(slideIndex>slides.length){slideIndex=1;}slides[slideIndex-1].style.display="block";setTimeout(showSlides,4000);}
-showSlides();
-</script>
-
 <!-- Gallery Section -->
 <section class="gallery-section" id="gallery">
 <h2>Our Work Gallery</h2>
@@ -186,8 +169,6 @@ showSlides();
 <img src="https://images.unsplash.com/photo-1555617117-08b4c7f3c8b1?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300" alt="Laptop repair work">
 <img src="https://images.unsplash.com/photo-1555617119-6e0df0aef7b3?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300" alt="PC components repair">
 <img src="https://images.unsplash.com/photo-1555617121-814af20d8f7c?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300" alt="Data recovery process">
-<img src="https://images.unsplash.com/photo-1581092785329-8e0d25c2d81e?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300" alt="Software installation">
-<img src="https://images.unsplash.com/photo-1555617117-5c8c1e2f5b2d?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300" alt="PC maintenance">
 </div>
 </section>
 
