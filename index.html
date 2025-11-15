@@ -1,208 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Computer Repairing by Rizwan</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Typed.js for auto typing -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <style>
-        /* ====== General Styling ====== */
-        body {margin:0;font-family:Arial,sans-serif;color:#333;}
-        header{background:#1a73e8;color:#fff;padding:15px;text-align:center;font-size:26px;}
-        nav{background:#333;padding:10px;text-align:center;}
-        nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:bold;}
-        nav a:hover{color:#1a73e8;}
-
-        /* ====== Hero Section ====== */
-        .hero{
-            height:100vh;
-            background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-                       url('https://images.unsplash.com/photo-1518770660439-4636190af475') no-repeat center center/cover;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            color:#fff;
-            text-align:center;
-            padding:0 20px;
-        }
-        .hero h1{font-size:60px;margin-bottom:15px;}
-        .hero p{font-size:24px;margin-bottom:25px;}
-        .hero .cta-btn{
-            background:#1a73e8;color:#fff;padding:15px 35px;margin:10px;border-radius:6px;text-decoration:none;font-size:18px;
-        }
-        .hero .cta-btn:hover{background:#0d4aad;}
-
-        /* ====== Service Cards ====== */
-        .services{padding:60px 20px;background:#f5f5f5;text-align:center;}
-        .services h2{margin-bottom:40px;}
-        .service-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;}
-        .service-card{
-            background:#fff;padding:25px;border-radius:8px;flex:1 1 250px;box-shadow:0 4px 12px rgba(0,0,0,0.1);
-            transition:transform 0.3s;
-        }
-        .service-card:hover{transform:translateY(-5px);}
-        .service-card img{width:60px;margin-bottom:15px;}
-
-        /* ====== Stats Section ====== */
-        .stats{padding:50px 20px;text-align:center;background:#1a73e8;color:#fff;}
-        .stats h2{margin-bottom:40px;}
-        .stat-items{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;}
-        .stat-item{flex:1 1 200px;font-size:22px;}
-
-        /* ====== Testimonials Slider ====== */
-        .testimonials{padding:60px 20px;text-align:center;}
-        .testimonial-slider{display:flex;overflow:hidden;position:relative;width:90%;margin:0 auto;}
-        .testimonial-slide{min-width:100%;transition:0.5s ease-in-out;padding:20px;background:#f9f9f9;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-        .testimonial-slide p{font-style:italic;margin-bottom:10px;}
-        .testimonial-slide strong{color:#1a73e8;}
-
-        /* ====== Gallery ====== */
-        .gallery-section{padding:60px 20px;background:#f5f5f5;text-align:center;}
-        .gallery-section h2{margin-bottom:40px;}
-        .gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
-        .gallery img{width:300px;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 2px 8px #aaa;}
-
-        /* ====== Newsletter ====== */
-        .newsletter{padding:50px 20px;text-align:center;background:#fff;}
-        .newsletter input{width:60%;padding:12px;border-radius:6px;border:1px solid #aaa;margin-right:10px;}
-        .newsletter button{padding:12px 25px;background:#1a73e8;color:#fff;border:none;border-radius:6px;cursor:pointer;}
-        .newsletter button:hover{background:#0d4aad;}
-
-        /* ====== Footer ====== */
-        footer{background:#333;color:#fff;text-align:center;padding:25px;}
-
-        /* ====== Floating Buttons ====== */
-        #whatsapp-btn,#call-btn{
-            position:fixed;right:20px;border-radius:50%;font-size:24px;color:#fff;text-align:center;padding:15px;
-            box-shadow:0 2px 8px rgba(0,0,0,0.4);z-index:999;
-        }
-        #whatsapp-btn{bottom:140px;background:#25D366;}
-        #call-btn{bottom:80px;background:#0f9d58;}
-
-        /* ====== Responsive ====== */
-        @media(max-width:768px){
-            .service-cards{flex-direction:column;}
-            .stat-items{flex-direction:column;}
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Repairing by Rizwan</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<style>
+/* ===== Reset & Global Styles ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+body{color:#333;background:#f4f6f8;}
+a{text-decoration:none;color:inherit;}
+section{padding:80px 20px;}
+h2{margin-bottom:40px;text-align:center;color:#1a73e8;}
+/* ===== Header & Navigation ===== */
+header{position:fixed;top:0;width:100%;background:rgba(0,0,0,0.6);color:#fff;padding:15px 0;text-align:center;z-index:1000;font-size:24px;}
+nav{display:flex;justify-content:center;gap:25px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:60px;padding:10px;}
+nav a{color:#333;font-weight:700;transition:0.3s;}
+nav a:hover{color:#1a73e8;}
+/* ===== Hero Section ===== */
+.hero{
+  height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;
+  position:relative;overflow:hidden;
+}
+.hero video{
+  position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;
+  filter:brightness(0.5);
+}
+.hero h1{font-size:60px;margin-bottom:20px;}
+.hero p{font-size:24px;margin-bottom:30px;}
+.hero .cta-btn{padding:15px 35px;margin:5px;background:#1a73e8;color:#fff;border-radius:8px;font-weight:700;transition:0.3s;}
+.hero .cta-btn:hover{background:#0d4aad;}
+/* ===== Service Cards (Glassmorphism) ===== */
+.services{background:#f4f6f8;}
+.service-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;}
+.service-card{
+  background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border-radius:15px;padding:30px;width:250px;text-align:center;color:#fff;transition:0.3s;box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+.service-card:hover{transform:translateY(-10px);}
+/* ===== Stats Section ===== */
+.stats{background:#1a73e8;color:#fff;text-align:center;}
+.stat-items{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;}
+.stat-item{flex:1 1 200px;font-size:28px;font-weight:700;transition:0.5s;}
+/* ===== Testimonials Slider ===== */
+.testimonials{background:#f4f6f8;}
+.testimonial-slider{position:relative;max-width:900px;margin:0 auto;overflow:hidden;}
+.testimonial-slide{min-width:100%;transition:0.5s;}
+.testimonial-slide p{font-style:italic;margin-bottom:10px;}
+.testimonial-slide strong{color:#1a73e8;}
+/* ===== Portfolio/Gallery ===== */
+.gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
+.gallery img{width:300px;height:200px;object-fit:cover;border-radius:12px;transition:0.3s;cursor:pointer;}
+.gallery img:hover{transform:scale(1.05);}
+ /* ===== Newsletter ===== */
+.newsletter{background:#fff;text-align:center;padding:50px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.1);}
+.newsletter input{padding:12px 20px;width:60%;border-radius:8px;border:1px solid #ccc;margin-right:10px;}
+.newsletter button{padding:12px 25px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;transition:0.3s;}
+.newsletter button:hover{background:#0d4aad;}
+/* ===== Floating Buttons ===== */
+#whatsapp-btn,#call-btn{position:fixed;right:20px;border-radius:50%;font-size:28px;color:#fff;text-align:center;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,0.4);z-index:999;}
+#whatsapp-btn{bottom:140px;background:#25D366;}
+#call-btn{bottom:80px;background:#0f9d58;}
+/* ===== Footer ===== */
+footer{background:#333;color:#fff;text-align:center;padding:25px;}
+/* ===== Responsive ===== */
+@media(max-width:768px){.service-cards,.stat-items,.gallery{flex-direction:column;align-items:center;}.hero h1{font-size:42px;}.hero p{font-size:20px;}}
+</style>
 </head>
-
 <body>
 
 <header>Computer Repairing by Rizwan</header>
-
 <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="quotation.html">Quotation</a>
-    <a href="booking.html">Booking</a>
-    <a href="payment.html">Payment</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-    <a href="social.html">Social</a>
-    <a href="email.html">Email</a>
-    <a href="login.html">Login</a>
+<a href="#hero">Home</a>
+<a href="#services">Services</a>
+<a href="#stats">Stats</a>
+<a href="#testimonials">Testimonials</a>
+<a href="#gallery">Gallery</a>
+<a href="#newsletter">Newsletter</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<!-- Hero Section with Auto Typing -->
-<section class="hero">
-    <h1><span id="typed-text"></span></h1>
-    <p>Your Trusted Partner for Laptop & PC Repairs</p>
-    <a href="booking.html" class="cta-btn">📅 Book Now</a>
-    <a href="https://wa.me/923014578828" class="cta-btn">💬 WhatsApp</a>
+<!-- Hero Section with Video Background -->
+<section class="hero" id="hero">
+<video autoplay muted loop>
+<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+</video>
+<h1><span id="typed-text"></span></h1>
+<p>Fast, Affordable & Reliable Computer Repair Services</p>
+<a href="booking.html" class="cta-btn">📅 Book Now</a>
+<a href="https://wa.me/923014578828" class="cta-btn">💬 WhatsApp</a>
 </section>
-
 <script>
 var typed = new Typed("#typed-text", {
-    strings: ["Professional Computer Repairing Services","Laptop & Desktop Specialist","Fast & Reliable Service"],
-    typeSpeed:50,
-    backSpeed:30,
-    loop:true
+strings: ["Professional Computer Repair","Laptop & Desktop Specialist","Trusted & Fast Service"],
+typeSpeed:50,
+backSpeed:30,
+loop:true
 });
 </script>
 
-<!-- Services Section -->
-<section class="services">
-    <h2>Our Services</h2>
-    <div class="service-cards">
-        <div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/laptop.png"><h3>Laptop Repair</h3></div>
-        <div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/hard-drive.png"><h3>PC Repair</h3></div>
-        <div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/software.png"><h3>Software Installation</h3></div>
-        <div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/data-backup.png"><h3>Data Recovery</h3></div>
-    </div>
+<!-- Services -->
+<section class="services" id="services">
+<h2>Our Services</h2>
+<div class="service-cards">
+<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/ffffff/laptop.png"/><h3>Laptop Repair</h3></div>
+<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/ffffff/hard-drive.png"/><h3>PC Repair</h3></div>
+<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/ffffff/software.png"/><h3>Software Installation</h3></div>
+<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/ffffff/data-backup.png"/><h3>Data Recovery</h3></div>
+</div>
 </section>
 
-<!-- Stats Section -->
-<section class="stats">
-    <h2>Why Choose Us</h2>
-    <div class="stat-items">
-        <div class="stat-item">10+ Years Experience</div>
-        <div class="stat-item">500+ Devices Repaired</div>
-        <div class="stat-item">100% Customer Satisfaction</div>
-    </div>
+<!-- Stats -->
+<section class="stats" id="stats">
+<h2>Why Choose Us</h2>
+<div class="stat-items">
+<div class="stat-item" data-target="10">0+ Years Experience</div>
+<div class="stat-item" data-target="500">0+ Devices Repaired</div>
+<div class="stat-item" data-target="100">0% Customer Satisfaction</div>
+</div>
 </section>
+<script>
+const counters=document.querySelectorAll(".stat-item");
+counters.forEach(counter=>{
+  counter.innerText="0";
+  const updateCounter=()=>{
+    const target=+counter.getAttribute("data-target");
+    const count=+counter.innerText.replace(/\D/g,'');
+    const increment=target/100;
+    if(count<target){
+      counter.innerText=Math.ceil(count+increment)+counter.innerText.replace(/\d/g,'');
+      setTimeout(updateCounter,30);
+    } else {counter.innerText=counter.innerText.replace(/\d+/,'')+target;}
+  };
+  updateCounter();
+});
+</script>
 
-<!-- Testimonials Section -->
-<section class="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonial-slider" id="testimonial-slider">
-        <div class="testimonial-slide">
-            <p>"Excellent service! My laptop works like new again."</p>
-            <strong>- Ali R.</strong>
-        </div>
-        <div class="testimonial-slide">
-            <p>"Fast, professional, and affordable."</p>
-            <strong>- Sara K.</strong>
-        </div>
-        <div class="testimonial-slide">
-            <p>"Highly recommend Rizwan's computer repair services."</p>
-            <strong>- Ahmed T.</strong>
-        </div>
-    </div>
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+<h2>Testimonials</h2>
+<div class="testimonial-slider" id="testimonial-slider">
+<div class="testimonial-slide"><p>"Excellent service! My laptop works like new again."</p><strong>- Ali R.</strong></div>
+<div class="testimonial-slide"><p>"Fast, professional, and affordable."</p><strong>- Sara K.</strong></div>
+<div class="testimonial-slide"><p>"Highly recommend Rizwan's services."</p><strong>- Ahmed T.</strong></div>
+</div>
 </section>
-
 <script>
 let slideIndex=0;
 const slides=document.querySelectorAll(".testimonial-slide");
-function showSlides(){
-    slides.forEach((slide,i)=>{slide.style.display="none";});
-    slideIndex++;
-    if(slideIndex>slides.length){slideIndex=1;}
-    slides[slideIndex-1].style.display="block";
-    setTimeout(showSlides,4000);
-}
+function showSlides(){slides.forEach(s=>s.style.display="none");slideIndex++;if(slideIndex>slides.length){slideIndex=1;}slides[slideIndex-1].style.display="block";setTimeout(showSlides,4000);}
 showSlides();
 </script>
 
-<!-- Gallery Section -->
-<section class="gallery-section">
-    <h2>Our Work Gallery</h2>
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-        <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
-        <img src="https://images.unsplash.com/photo-1580894894513-364f10b1e8a8">
-    </div>
+<!-- Gallery -->
+<section class="gallery-section" id="gallery">
+<h2>Our Work Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+<img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
+<img src="https://images.unsplash.com/photo-1580894894513-364f10b1e8a8">
+</div>
 </section>
 
-<!-- Newsletter Section -->
-<section class="newsletter">
-    <h2>Subscribe to Our Newsletter</h2>
-    <form action="email.html" method="POST">
-        <input type="email" placeholder="Enter your email..." required>
-        <button type="submit">Subscribe</button>
-    </form>
+<!-- Newsletter -->
+<section class="newsletter" id="newsletter">
+<h2>Subscribe to Our Newsletter</h2>
+<form action="email.html" method="POST">
+<input type="email" placeholder="Enter your email..." required>
+<button type="submit">Subscribe</button>
+</form>
 </section>
 
 <!-- Floating Buttons -->
 <a id="whatsapp-btn" href="https://wa.me/923014578828" target="_blank">💬</a>
 <a id="call-btn" href="tel:03014578828">📞</a>
 
-<footer>© 2025 Computer Repairing by Rizwan. All Rights Reserved.</footer>
+<!-- Footer -->
+<footer id="contact">
+<p>© 2025 Computer Repairing by Rizwan. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
-
