@@ -33,7 +33,7 @@ nav a:hover{color:#1a73e8;}
 .hero .cta-btn{padding:15px 35px;margin:5px;background:#ff9800;color:#fff;border-radius:8px;font-weight:700;transition:0.3s;}
 .hero .cta-btn:hover{background:#e68a00;}
 
-/* ===== Services Section (Glassmorphism) ===== */
+/* ===== Services Section ===== */
 .services{background:#f0f2f5;}
 .service-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;}
 .service-card{
@@ -54,7 +54,7 @@ nav a:hover{color:#1a73e8;}
 .testimonial-slide p{font-style:italic;margin-bottom:10px;}
 .testimonial-slide strong{color:#1a73e8;}
 
-/* ===== Portfolio / Work Gallery ===== */
+/* ===== Gallery Section ===== */
 .gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
 .gallery img{width:300px;height:200px;object-fit:cover;border-radius:12px;transition:0.3s;cursor:pointer;}
 .gallery img:hover{transform:scale(1.05);}
@@ -65,7 +65,7 @@ nav a:hover{color:#1a73e8;}
 .newsletter button{padding:12px 25px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;transition:0.3s;}
 .newsletter button:hover{background:#0d4aad;}
 
-/* ===== Floating WhatsApp / Call Buttons ===== */
+/* ===== Floating Buttons ===== */
 #whatsapp-btn,#call-btn{position:fixed;right:20px;border-radius:50%;font-size:28px;color:#fff;text-align:center;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,0.4);z-index:999;}
 #whatsapp-btn{bottom:140px;background:#25D366;}
 #call-btn{bottom:80px;background:#0f9d58;}
@@ -108,18 +108,34 @@ loop:true
 });
 </script>
 
-<!-- Services -->
+<!-- Services Section -->
 <section class="services" id="services">
 <h2>Our Services</h2>
 <div class="service-cards">
-<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/laptop.png"/><h3>Laptop Repair</h3><p>Hardware & software solutions for all laptop brands.</p></div>
-<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/hard-drive.png"/><h3>PC Repair</h3><p>Desktop troubleshooting, upgrades & optimization.</p></div>
-<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/software.png"/><h3>Software Installation</h3><p>Windows, Linux, antivirus, and essential software setup.</p></div>
-<div class="service-card"><img src="https://img.icons8.com/ios-filled/50/000000/data-backup.png"/><h3>Data Recovery</h3><p>Recover lost or corrupted files efficiently and securely.</p></div>
+<div class="service-card">
+  <img src="https://images.unsplash.com/photo-1581090700227-d7f826d9c36b?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="Laptop Repair"/>
+  <h3>Laptop Repair</h3>
+  <p>Hardware & software solutions for all laptop brands.</p>
+</div>
+<div class="service-card">
+  <img src="https://images.unsplash.com/photo-1581093588401-5c8d1c17df7a?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="PC Repair"/>
+  <h3>PC Repair</h3>
+  <p>Desktop troubleshooting, upgrades & optimization.</p>
+</div>
+<div class="service-card">
+  <img src="https://images.unsplash.com/photo-1581092335270-7f2d9a5d0d21?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="Software Installation"/>
+  <h3>Software Installation</h3>
+  <p>Windows, Linux, antivirus, and essential software setup.</p>
+</div>
+<div class="service-card">
+  <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?crop=entropy&cs=tinysrgb&fit=max&h=50&w=50" alt="Data Recovery"/>
+  <h3>Data Recovery</h3>
+  <p>Recover lost or corrupted files efficiently and securely.</p>
+</div>
 </div>
 </section>
 
-<!-- Stats -->
+<!-- Stats Section -->
 <section class="stats" id="stats">
 <h2>Why Choose Us</h2>
 <div class="stat-items">
@@ -163,13 +179,15 @@ function showSlides(){slides.forEach(s=>s.style.display="none");slideIndex++;if(
 showSlides();
 </script>
 
-<!-- Gallery -->
+<!-- Gallery Section -->
 <section class="gallery-section" id="gallery">
 <h2>Our Work Gallery</h2>
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-<img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952">
-<img src="https://images.unsplash.com/photo-1580894894513-364f10b1e8a8">
+<img src="https://images.unsplash.com/photo-1555617117-08b4c7f3c8b1?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300" alt="Laptop repair work">
+<img src="https://images.unsplash.com/photo-1555617119-6e0df0aef7b3?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300" alt="PC components repair">
+<img src="https://images.unsplash.com/photo-1555617121-814af20d8f7c?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300" alt="Data recovery process">
+<img src="https://images.unsplash.com/photo-1581092785329-8e0d25c2d81e?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300" alt="Software installation">
+<img src="https://images.unsplash.com/photo-1555617117-5c8c1e2f5b2d?crop=entropy&cs=tinysrgb&fit=max&h=200&w=300" alt="PC maintenance">
 </div>
 </section>
 
